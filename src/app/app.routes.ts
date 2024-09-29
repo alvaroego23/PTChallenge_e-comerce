@@ -2,12 +2,16 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
-        path: 'products',
-        loadComponent: () => import('./components/products/products.component')
+        path: 'products',        
+        loadChildren: () => import('./components/products/products.routes'),
+      },   
+    {
+        path:'sing-in',
+        loadComponent:()=> import('./components/login/login.component')
     },
     {
-        path: 'product-details:id',
-        loadComponent: () => import('./components/details-product/details-product.component')
+        path:'car-checkout',
+        loadComponent:()=> import('./components/car-checkout/car-checkout.component')
     },
     { path: '', redirectTo: 'products', pathMatch: 'full' },
     { path: '**', redirectTo: 'products', pathMatch: 'full' },

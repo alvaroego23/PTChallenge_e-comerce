@@ -1,13 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { ProductService } from '../../service/product.service';
-import { CommonModule } from '@angular/common';
-import { HeaderComponent } from "../header/header.component";
 import { CardProductComponent } from "../card-product/card-product.component";
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, CardProductComponent],
+  imports: [ CardProductComponent, HeaderComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })
