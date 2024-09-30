@@ -1,0 +1,15 @@
+<form class="space-y-6 md:w-full flex flex-row " [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label class=" text-sm font-medium leading-6 text-gray-900" for="productSearch">Buscar Producto:</label>
+        <input id="productSearch" type="text" formControlName="productSearch" class="w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+        
+    </div>
+    <button class="bg-indigo-500 flex flex-row justify-center items-center w-12 text-white" type="submit" [disabled]="searchForm.invalid"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/>
+      </svg>
+    </button>    
+</form>
+<div *ngIf="searchForm.controls['productSearch'].invalid && searchForm.controls['productSearch'].touched">
+    <small *ngIf="searchForm.controls['productSearch'].hasError('minlength')">Debe tener al menos 3
+        caracteres.</small>
+</div>

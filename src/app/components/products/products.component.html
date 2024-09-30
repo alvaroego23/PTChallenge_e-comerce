@@ -1,6 +1,10 @@
 <app-header />
+
 <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-row justify-end mb-5">
+        <app-shearch-product [products]="products()" />
+      </div>       
       <div class="flex flex-wrap -m-4">
         @for(product of products(); track $index){
           <app-card-product class="lg:w-1/4 md:w-1/2 p-4 w-full rounded shadow-none hover:shadow-xl"  [product]="product" >          
