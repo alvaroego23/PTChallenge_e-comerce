@@ -1,3 +1,16 @@
+# Prueba técnica Angular 17 NGXR SIGNAL 
+Challenge: E-commerce App
+El objetivo del challenge es construir una aplicación de e-commerce utilizando Angular 17 LTS. La 
+aplicación debe consumir una API externa, manejar estados de forma eficiente y ofrecer una 
+experiencia de usuario fluida y responsiva. Se requiere el uso de las nuevas características de 
+Angular, la implementación de soluciones complejas como manejo de estado global, 
+interceptores, servicios, validaciones en formularios, y optimización del rendimiento.
+
+# Link Vercel
+
+https://pt-challenge-e-comerce.vercel.app/
+
+
 # PTChallengeEComerce
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
